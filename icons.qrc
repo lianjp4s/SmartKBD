@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/smkbd.png</file>
+    </qresource>
+</RCC>

@@ -17,15 +17,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    traymenu.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    traymenu.h
 
 FORMS += \
     mainwindow.ui
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+
+win32: LIBS +=  -luser32
+
+RESOURCES += \
+	icons.qrc
+

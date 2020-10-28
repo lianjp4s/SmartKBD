@@ -1,16 +1,30 @@
 #include "traymenu.h"
 
+#include <QApplication>
+
 TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)
 {
-    pShowAction = new QAction(tr("显示设置窗口"));
-    pConfigWindow = new MainWindow;
+	pShowSettingAction = new QAction(tr("显示设置窗口"));
+	pQuitAction = new QAction(tr("退出"));
+	this->addAction(pShowSettingAction);
+	this->addAction(pQuitAction);
 
-    connect(pShowAction, &QAction::triggered, this, &TrayMenu::prvvShowConfigWindowSlot);
+	pConfigWindow = new SettingWindow;
+
+	connect(pShowSettingAction, &QAction::triggered,
+			this, &TrayMenu::on_pShowSettingAction_triggered);
+	connect(pQuitAction, &QAction::triggered,
+			this, &TrayMenu::on_pQuitAction_triggered);
 }
 
-void TrayMenu::prvvShowConfigWindowSlot()
+void TrayMenu::on_pShowSettingAction_triggered()
 {
     pConfigWindow->show();
+}
+
+void TrayMenu::on_pQuitAction_triggered()
+{
+	qApp->quit();
 }
 
 TrayMenu::~TrayMenu()

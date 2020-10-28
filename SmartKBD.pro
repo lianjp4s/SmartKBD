@@ -17,19 +17,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    mainwindow.cpp \
+    settingwindow.cpp \
     traymenu.cpp
 
 HEADERS += \
-    mainwindow.h \
+    settingwindow.h \
     traymenu.h
 
 FORMS += \
-    mainwindow.ui
+    settingwindow.ui
 
 
 win32: LIBS +=  -luser32
 
 RESOURCES += \
-	icons.qrc
+	icons.qrc \
+	pics.qrc
 

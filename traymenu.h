@@ -4,7 +4,7 @@
 #include <QMenu>
 
 
-#include "mainwindow.h"
+#include "settingwindow.h"
 
 class TrayMenu : public QMenu
 {
@@ -18,19 +18,20 @@ signals:
     void showWindow();
 
 private:
-    QAction *pShowAction;
+	QAction *pShowSettingAction;
 #if 0
     QAction *pSettingAction;
     QAction *pHomePageAction;
     QAction *pHelpAction;
     QAction *pAboutAction;
     QAction *pUpgradeAction;
-    QAction *pQuitAction;
 #endif
-    MainWindow *pConfigWindow;
+	QAction *pQuitAction;
+	SettingWindow *pConfigWindow;
 
 private slots:
-    void prvvShowConfigWindowSlot();
+	void on_pShowSettingAction_triggered();
+	void on_pQuitAction_triggered();
 };
 
 

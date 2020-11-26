@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>987</width>
-    <height>600</height>
+    <height>411</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -23,6 +23,17 @@
       <height>461</height>
      </rect>
     </property>
+    <widget class="QWidget" name="gridLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>19</y>
+       <width>951</width>
+       <height>331</height>
+      </rect>
+     </property>
+     <layout class="QGridLayout" name="mapLyt"/>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

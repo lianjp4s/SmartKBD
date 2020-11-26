@@ -1,0 +1,161 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+KEYNAME_H	.\keyname.h	2;"	d
+KEYPROCESS_H	.\keyprocess.h	2;"	d
+KeyNameList	.\keyname.h	/^QStringList KeyNameList = {$/;"	v
+KeyProcess	.\keyprocess.cpp	/^KeyProcess::KeyProcess()$/;"	f	class:KeyProcess
+KeyProcess	.\keyprocess.h	/^class KeyProcess$/;"	c
+LowLevelKeyboardProc	.\keyprocess.cpp	/^LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)$/;"	f
+MAPWIDGET_H	.\mapwidget.h	2;"	d
+MapWidget	.\mapwidget.cpp	/^MapWidget::MapWidget(QWidget *parent) : QWidget(parent)$/;"	f	class:MapWidget
+MapWidget	.\mapwidget.h	/^class MapWidget : public QWidget$/;"	c
+SETTINGWINDOW_H	.\settingwindow.h	2;"	d
+SettingWindow	.\settingwindow.cpp	/^SettingWindow::SettingWindow(QWidget *parent) :$/;"	f	class:SettingWindow
+SettingWindow	.\settingwindow.h	/^class SettingWindow : public QMainWindow$/;"	c
+TRAYMENU_H	.\traymenu.h	2;"	d
+TrayMenu	.\traymenu.cpp	/^TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)$/;"	f	class:TrayMenu
+TrayMenu	.\traymenu.h	/^class TrayMenu : public QMenu$/;"	c
+Ui	.\settingwindow.h	/^namespace Ui {$/;"	n
+closeEvent	.\settingwindow.cpp	/^void SettingWindow::closeEvent(QCloseEvent *event)$/;"	f	class:SettingWindow
+eKey_0	.\keyname.h	/^	eKey_0,$/;"	e	enum:__anon1
+eKey_1	.\keyname.h	/^	eKey_1,$/;"	e	enum:__anon1
+eKey_2	.\keyname.h	/^	eKey_2,$/;"	e	enum:__anon1
+eKey_3	.\keyname.h	/^	eKey_3,$/;"	e	enum:__anon1
+eKey_4	.\keyname.h	/^	eKey_4,$/;"	e	enum:__anon1
+eKey_5	.\keyname.h	/^	eKey_5,$/;"	e	enum:__anon1
+eKey_6	.\keyname.h	/^	eKey_6,$/;"	e	enum:__anon1
+eKey_7	.\keyname.h	/^	eKey_7,$/;"	e	enum:__anon1
+eKey_8	.\keyname.h	/^	eKey_8,$/;"	e	enum:__anon1
+eKey_9	.\keyname.h	/^	eKey_9,$/;"	e	enum:__anon1
+eKey_A	.\keyname.h	/^	eKey_A = 0x41,$/;"	e	enum:__anon1
+eKey_ALT	.\keyname.h	/^	eKey_ALT,$/;"	e	enum:__anon1
+eKey_APP	.\keyname.h	/^	eKey_APP,$/;"	e	enum:__anon1
+eKey_Add	.\keyname.h	/^	eKey_Add,$/;"	e	enum:__anon1
+eKey_B	.\keyname.h	/^	eKey_B,$/;"	e	enum:__anon1
+eKey_BS	.\keyname.h	/^	eKey_BS = 0x08,$/;"	e	enum:__anon1
+eKey_BackQuote	.\keyname.h	/^	eKey_BackQuote,$/;"	e	enum:__anon1
+eKey_BackSlash	.\keyname.h	/^	eKey_BackSlash,$/;"	e	enum:__anon1
+eKey_C	.\keyname.h	/^	eKey_C,$/;"	e	enum:__anon1
+eKey_Comma	.\keyname.h	/^	eKey_Comma,$/;"	e	enum:__anon1
+eKey_D	.\keyname.h	/^	eKey_D,$/;"	e	enum:__anon1
+eKey_Del	.\keyname.h	/^	eKey_Del,$/;"	e	enum:__anon1
+eKey_Dot	.\keyname.h	/^	eKey_Dot,$/;"	e	enum:__anon1
+eKey_Down	.\keyname.h	/^	eKey_Down,$/;"	e	enum:__anon1
+eKey_E	.\keyname.h	/^	eKey_E,$/;"	e	enum:__anon1
+eKey_End	.\keyname.h	/^	eKey_End,$/;"	e	enum:__anon1
+eKey_Enter	.\keyname.h	/^	eKey_Enter = 0x0d,$/;"	e	enum:__anon1
+eKey_Esc	.\keyname.h	/^	eKey_Esc = 0x1b,$/;"	e	enum:__anon1
+eKey_Exec	.\keyname.h	/^	eKey_Exec,$/;"	e	enum:__anon1
+eKey_F	.\keyname.h	/^	eKey_F,$/;"	e	enum:__anon1
+eKey_F1	.\keyname.h	/^	eKey_F1,$/;"	e	enum:__anon1
+eKey_F10	.\keyname.h	/^	eKey_F10,$/;"	e	enum:__anon1
+eKey_F11	.\keyname.h	/^	eKey_F11,$/;"	e	enum:__anon1
+eKey_F12	.\keyname.h	/^	eKey_F12,$/;"	e	enum:__anon1
+eKey_F13	.\keyname.h	/^	eKey_F13,$/;"	e	enum:__anon1
+eKey_F14	.\keyname.h	/^	eKey_F14,$/;"	e	enum:__anon1
+eKey_F15	.\keyname.h	/^	eKey_F15,$/;"	e	enum:__anon1
+eKey_F16	.\keyname.h	/^	eKey_F16,$/;"	e	enum:__anon1
+eKey_F17	.\keyname.h	/^	eKey_F17,$/;"	e	enum:__anon1
+eKey_F18	.\keyname.h	/^	eKey_F18,$/;"	e	enum:__anon1
+eKey_F19	.\keyname.h	/^	eKey_F19,$/;"	e	enum:__anon1
+eKey_F2	.\keyname.h	/^	eKey_F2,$/;"	e	enum:__anon1
+eKey_F20	.\keyname.h	/^	eKey_F20,$/;"	e	enum:__anon1
+eKey_F21	.\keyname.h	/^	eKey_F21,$/;"	e	enum:__anon1
+eKey_F22	.\keyname.h	/^	eKey_F22,$/;"	e	enum:__anon1
+eKey_F23	.\keyname.h	/^	eKey_F23,$/;"	e	enum:__anon1
+eKey_F24	.\keyname.h	/^	eKey_F24,$/;"	e	enum:__anon1
+eKey_F3	.\keyname.h	/^	eKey_F3,$/;"	e	enum:__anon1
+eKey_F4	.\keyname.h	/^	eKey_F4,$/;"	e	enum:__anon1
+eKey_F5	.\keyname.h	/^	eKey_F5,$/;"	e	enum:__anon1
+eKey_F6	.\keyname.h	/^	eKey_F6,$/;"	e	enum:__anon1
+eKey_F7	.\keyname.h	/^	eKey_F7,$/;"	e	enum:__anon1
+eKey_F8	.\keyname.h	/^	eKey_F8,$/;"	e	enum:__anon1
+eKey_F9	.\keyname.h	/^	eKey_F9,$/;"	e	enum:__anon1
+eKey_G	.\keyname.h	/^	eKey_G,$/;"	e	enum:__anon1
+eKey_H	.\keyname.h	/^	eKey_H,$/;"	e	enum:__anon1
+eKey_Help	.\keyname.h	/^	eKey_Help,$/;"	e	enum:__anon1
+eKey_Home	.\keyname.h	/^	eKey_Home,$/;"	e	enum:__anon1
+eKey_I	.\keyname.h	/^	eKey_I,$/;"	e	enum:__anon1
+eKey_Insert	.\keyname.h	/^	eKey_Insert,$/;"	e	enum:__anon1
+eKey_J	.\keyname.h	/^	eKey_J,$/;"	e	enum:__anon1
+eKey_K	.\keyname.h	/^	eKey_K,$/;"	e	enum:__anon1
+eKey_L	.\keyname.h	/^	eKey_L,$/;"	e	enum:__anon1
+eKey_LBrackets	.\keyname.h	/^	eKey_LBrackets,$/;"	e	enum:__anon1
+eKey_LCtrl	.\keyname.h	/^	eKey_LCtrl,$/;"	e	enum:__anon1
+eKey_LShift	.\keyname.h	/^	eKey_LShift,$/;"	e	enum:__anon1
+eKey_LWin	.\keyname.h	/^	eKey_LWin,$/;"	e	enum:__anon1
+eKey_Left	.\keyname.h	/^	eKey_Left,$/;"	e	enum:__anon1
+eKey_M	.\keyname.h	/^	eKey_M,$/;"	e	enum:__anon1
+eKey_Minus	.\keyname.h	/^	eKey_Minus,$/;"	e	enum:__anon1
+eKey_Multi	.\keyname.h	/^	eKey_Multi,$/;"	e	enum:__anon1
+eKey_N	.\keyname.h	/^	eKey_N,$/;"	e	enum:__anon1
+eKey_NUMLOCK	.\keyname.h	/^	eKey_NUMLOCK,$/;"	e	enum:__anon1
+eKey_O	.\keyname.h	/^	eKey_O,$/;"	e	enum:__anon1
+eKey_P	.\keyname.h	/^	eKey_P,$/;"	e	enum:__anon1
+eKey_Pad0	.\keyname.h	/^	eKey_Pad0,$/;"	e	enum:__anon1
+eKey_Pad1	.\keyname.h	/^	eKey_Pad1,$/;"	e	enum:__anon1
+eKey_Pad2	.\keyname.h	/^	eKey_Pad2,$/;"	e	enum:__anon1
+eKey_Pad3	.\keyname.h	/^	eKey_Pad3,$/;"	e	enum:__anon1
+eKey_Pad4	.\keyname.h	/^	eKey_Pad4,$/;"	e	enum:__anon1
+eKey_Pad5	.\keyname.h	/^	eKey_Pad5,$/;"	e	enum:__anon1
+eKey_Pad6	.\keyname.h	/^	eKey_Pad6,$/;"	e	enum:__anon1
+eKey_Pad7	.\keyname.h	/^	eKey_Pad7,$/;"	e	enum:__anon1
+eKey_Pad8	.\keyname.h	/^	eKey_Pad8,$/;"	e	enum:__anon1
+eKey_Pad9	.\keyname.h	/^	eKey_Pad9,$/;"	e	enum:__anon1
+eKey_PadAdd	.\keyname.h	/^	eKey_PadAdd,$/;"	e	enum:__anon1
+eKey_PadDecimal	.\keyname.h	/^	eKey_PadDecimal,$/;"	e	enum:__anon1
+eKey_PadDivide	.\keyname.h	/^	eKey_PadDivide,$/;"	e	enum:__anon1
+eKey_PadSep	.\keyname.h	/^	eKey_PadSep,$/;"	e	enum:__anon1
+eKey_PadSubtract	.\keyname.h	/^	eKey_PadSubtract,$/;"	e	enum:__anon1
+eKey_PgDn	.\keyname.h	/^	eKey_PgDn,$/;"	e	enum:__anon1
+eKey_PgUp	.\keyname.h	/^	eKey_PgUp,$/;"	e	enum:__anon1
+eKey_Print	.\keyname.h	/^	eKey_Print,$/;"	e	enum:__anon1
+eKey_PrtSrc	.\keyname.h	/^	eKey_PrtSrc,$/;"	e	enum:__anon1
+eKey_Q	.\keyname.h	/^	eKey_Q,$/;"	e	enum:__anon1
+eKey_R	.\keyname.h	/^	eKey_R,$/;"	e	enum:__anon1
+eKey_RBrackets	.\keyname.h	/^	eKey_RBrackets,$/;"	e	enum:__anon1
+eKey_RCtrl	.\keyname.h	/^	eKey_RCtrl,$/;"	e	enum:__anon1
+eKey_RShift	.\keyname.h	/^	eKey_RShift,$/;"	e	enum:__anon1
+eKey_RWin	.\keyname.h	/^	eKey_RWin,$/;"	e	enum:__anon1
+eKey_Right	.\keyname.h	/^	eKey_Right,$/;"	e	enum:__anon1
+eKey_S	.\keyname.h	/^	eKey_S,$/;"	e	enum:__anon1
+eKey_SCROLL	.\keyname.h	/^	eKey_SCROLL,$/;"	e	enum:__anon1
+eKey_Select	.\keyname.h	/^	eKey_Select,$/;"	e	enum:__anon1
+eKey_Semicol	.\keyname.h	/^	eKey_Semicol,$/;"	e	enum:__anon1
+eKey_SingleQuote	.\keyname.h	/^	eKey_SingleQuote,$/;"	e	enum:__anon1
+eKey_Slash	.\keyname.h	/^	eKey_Slash,$/;"	e	enum:__anon1
+eKey_Sleep	.\keyname.h	/^	eKey_Sleep = 0x5f,$/;"	e	enum:__anon1
+eKey_Space	.\keyname.h	/^	eKey_Space = 0x20,$/;"	e	enum:__anon1
+eKey_T	.\keyname.h	/^	eKey_T,$/;"	e	enum:__anon1
+eKey_Tab	.\keyname.h	/^	eKey_Tab,$/;"	e	enum:__anon1
+eKey_U	.\keyname.h	/^	eKey_U,$/;"	e	enum:__anon1
+eKey_Up	.\keyname.h	/^	eKey_Up,$/;"	e	enum:__anon1
+eKey_V	.\keyname.h	/^	eKey_V,$/;"	e	enum:__anon1
+eKey_W	.\keyname.h	/^	eKey_W,$/;"	e	enum:__anon1
+eKey_X	.\keyname.h	/^	eKey_X,$/;"	e	enum:__anon1
+eKey_Y	.\keyname.h	/^	eKey_Y,$/;"	e	enum:__anon1
+eKey_Z	.\keyname.h	/^	eKey_Z,$/;"	e	enum:__anon1
+eKey_t	.\keyname.h	/^} eKey_t;$/;"	t	typeref:enum:__anon1
+hhkLowLevelKybd	.\keyprocess.h	/^	HHOOK hhkLowLevelKybd;$/;"	m	class:KeyProcess
+keyIDLbl	.\mapwidget.h	/^	QLabel *keyIDLbl;$/;"	m	class:MapWidget
+kpReference	.\keyprocess.cpp	/^KeyProcess * kpReference;$/;"	v
+main	.\main.cpp	/^int main(int argc, char *argv[])$/;"	f
+mainLyt	.\mapwidget.h	/^	QHBoxLayout *mainLyt;$/;"	m	class:MapWidget
+mapwidgetList	.\settingwindow.h	/^	QList <MapWidget *> mapwidgetList;$/;"	m	class:SettingWindow
+on_pQuitAction_triggered	.\traymenu.cpp	/^void TrayMenu::on_pQuitAction_triggered()$/;"	f	class:TrayMenu
+on_pShowSettingAction_triggered	.\traymenu.cpp	/^void TrayMenu::on_pShowSettingAction_triggered()$/;"	f	class:TrayMenu
+pConfigWindow	.\traymenu.h	/^	SettingWindow *pConfigWindow;$/;"	m	class:TrayMenu
+pQuitAction	.\traymenu.h	/^	QAction *pQuitAction;$/;"	m	class:TrayMenu
+pShowSettingAction	.\traymenu.h	/^	QAction *pShowSettingAction;$/;"	m	class:TrayMenu
+setKeyName	.\mapwidget.cpp	/^void MapWidget::setKeyName(const QString &name)$/;"	f	class:MapWidget
+startProcess	.\keyprocess.cpp	/^void KeyProcess::startProcess()$/;"	f	class:KeyProcess
+ui	.\settingwindow.h	/^	Ui::SettingWindow *ui;$/;"	m	class:SettingWindow
+virtualkeyIDCBox	.\mapwidget.h	/^	QComboBox *virtualkeyIDCBox;$/;"	m	class:MapWidget
+width	.\mapwidget.h	/^	int width;$/;"	m	class:MapWidget
+~KeyProcess	.\keyprocess.cpp	/^KeyProcess::~KeyProcess()$/;"	f	class:KeyProcess
+~SettingWindow	.\settingwindow.cpp	/^SettingWindow::~SettingWindow()$/;"	f	class:SettingWindow
+~TrayMenu	.\traymenu.cpp	/^TrayMenu::~TrayMenu()$/;"	f	class:TrayMenu

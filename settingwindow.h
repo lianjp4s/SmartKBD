@@ -5,10 +5,14 @@
 
 #include <QMainWindow>
 #include <QTimer>
-#include <QDebug>
-#include <qt_windows.h>
+
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QFile>
 
 #include <QCloseEvent>
+#include "keylabel.h"
 
 namespace Ui {
 class SettingWindow;
@@ -25,8 +29,12 @@ public:
 
 private:
 	Ui::SettingWindow *ui;
-	HHOOK hhkLowLevelKybd;
-	bool bWinKey;
+
+	QList <KeyLabel *> keyLabels;
+
+	QJsonObject *locationConfig;
+	QJsonDocument *locationConfigDoc;
+	QFile *locationConfigFile;
 
 
 private:

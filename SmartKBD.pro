@@ -16,11 +16,17 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    keylabel.cpp \
+    keyname.cpp \
+    keyprocess.cpp \
     main.cpp \
     settingwindow.cpp \
     traymenu.cpp
 
 HEADERS += \
+    keylabel.h \
+    keyname.h \
+    keyprocess.h \
     settingwindow.h \
     traymenu.h
 

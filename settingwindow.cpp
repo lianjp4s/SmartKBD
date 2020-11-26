@@ -1,31 +1,8 @@
 #include "settingwindow.h"
 #include "ui_settingwindow.h"
 
-// Crosslink between Qt class and win callback
-SettingWindow * mwReference;
-
-LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
-{
-	if (nCode == HC_ACTION)
-	{
-		switch (wParam)
-		{
-			// Pass KeyDown/KeyUp messages for Qt class to logicize
-		case WM_KEYDOWN:
-			qDebug() << "pressed";
-			break;
-		case WM_SYSKEYDOWN:
-			qDebug() << "pressed";
-			break;
-		case WM_KEYUP:
-			qDebug() << "released";
-			break;
-		}
-	}
-	return CallNextHookEx(nullptr, nCode, wParam, lParam);
-	return 1;
-}
-
+#include <QDebug>
+#include <QMessageBox>
 
 
 SettingWindow::SettingWindow(QWidget *parent) :
@@ -34,26 +11,36 @@ SettingWindow::SettingWindow(QWidget *parent) :
 {
 	ui->setupUi(this);
 
-	// Setup variables
-	mwReference = this;
-	bWinKey     = false;
+	KeyLabel *mapWidget1 = new KeyLabel(2);
 
-	// Install the low-level keyboard & mouse hooks
-	hhkLowLevelKybd = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, nullptr, 0);
+	ui->mapLyt->addWidget(mapWidget1);
 
-	QPixmap bacMap(":/pics/layout.png");
-
-	QPalette bacPalette = this->palette();
-	bacPalette.setBrush(QPalette::Background, QBrush(QPixmap(":/pics/layout.png")));
-
-	ui->widget->setPalette(bacPalette);
+	locationConfigFile = new QFile("./locationConfig.json");
+	if (!locationConfigFile->open(QIODevice::ReadWrite)) {
+		QMessageBox::warning(this, tr("错误"), tr("打开配置文件失败"));
+		return;
+	}
+	QJsonDocument tmpJDoc = QJsonDocument::fromJson(locationConfigFile->readAll());
+	QJsonObject tmpJObj = tmpJDoc.object();
+	QJsonArray tmpJArray = tmpJObj["config"].toArray();
+	int tmpY = 0;
+	int tmpX = 0;
+	for (quint8 i = 0; i < tmpJArray.size(); i++) {
+		tmpJObj = tmpJArray.at(i).toObject();
+		auto *keyLabel = new KeyLabel(tmpJObj["KeyID"].toInt());
+		if (tmpY != tmpJObj["yPos"].toInt()) {
+			tmpY = tmpJObj["yPos"].toInt();
+			tmpX = 0;
+		}
+		ui->mapLyt->addWidget(keyLabel, tmpY, tmpX, 1, tmpJObj["width"].toInt());
+		tmpX += tmpJObj["width"].toInt();
+	}
+	locationConfigFile->close();
 
 }
 
 SettingWindow::~SettingWindow()
 {
-	// Be friendly! Remove hooks!
-	UnhookWindowsHookEx(hhkLowLevelKybd);
 	delete ui;
 }
 

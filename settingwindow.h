@@ -4,6 +4,8 @@
 #include <QMainWindow>
 
 #include <QMainWindow>
+#include <QGridLayout>
+#include <QWidget>
 #include <QTimer>
 
 #include <QJsonObject>
@@ -13,10 +15,6 @@
 
 #include <QCloseEvent>
 #include "keylabel.h"
-
-namespace Ui {
-class SettingWindow;
-}
 
 class SettingWindow : public QMainWindow
 {
@@ -28,7 +26,8 @@ public:
 
 
 private:
-	Ui::SettingWindow *ui;
+	QGridLayout *mapLyt;
+	QWidget *mapWidget;
 
 	QList <KeyLabel *> keyLabels;
 

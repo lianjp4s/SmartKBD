@@ -1,6 +1,7 @@
 #include "traymenu.h"
 
 #include <QApplication>
+#include <QMessageBox>
 
 TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)
 {
@@ -19,7 +20,7 @@ TrayMenu::TrayMenu(QWidget *parent) : QMenu(parent)
 
 void TrayMenu::on_pShowSettingAction_triggered()
 {
-    pConfigWindow->show();
+	pConfigWindow->show();
 }
 
 void TrayMenu::on_pQuitAction_triggered()

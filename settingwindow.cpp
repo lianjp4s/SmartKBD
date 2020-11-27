@@ -1,19 +1,15 @@
 #include "settingwindow.h"
-#include "ui_settingwindow.h"
 
 #include <QDebug>
 #include <QMessageBox>
 
 
 SettingWindow::SettingWindow(QWidget *parent) :
-	QMainWindow(parent),
-	ui(new Ui::SettingWindow)
+	QMainWindow(parent)
 {
-	ui->setupUi(this);
 
-	KeyLabel *mapWidget1 = new KeyLabel(2);
-
-	ui->mapLyt->addWidget(mapWidget1);
+	mapWidget = new QWidget;
+	mapLyt = new QGridLayout(mapWidget);
 
 	locationConfigFile = new QFile("./locationConfig.json");
 	if (!locationConfigFile->open(QIODevice::ReadWrite)) {
@@ -32,16 +28,18 @@ SettingWindow::SettingWindow(QWidget *parent) :
 			tmpY = tmpJObj["yPos"].toInt();
 			tmpX = 0;
 		}
-		ui->mapLyt->addWidget(keyLabel, tmpY, tmpX, 1, tmpJObj["width"].toInt());
+		//qDebug() << "Key : " << keyLabel->text() << "\t\t\t" << "y : " << tmpY << "x : " << tmpX;
+		mapLyt->addWidget(keyLabel, tmpY, tmpX, 1, tmpJObj["width"].toInt());
 		tmpX += tmpJObj["width"].toInt();
 	}
 	locationConfigFile->close();
+	this->setCentralWidget(mapWidget);
+	this->setStyleSheet("font-family: Fantasque Sans Mono; font-size: 12pt");
 
 }
 
 SettingWindow::~SettingWindow()
 {
-	delete ui;
 }
 
 void SettingWindow::closeEvent(QCloseEvent *event)

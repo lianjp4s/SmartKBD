@@ -3,6 +3,8 @@
 
 #include <qt_windows.h>
 
+int lKeyPrecessGetVKCode();
+
 class KeyProcess
 {
 

@@ -6,6 +6,8 @@
 #include <QLabel>
 #include <QHBoxLayout>
 
+#include "remapdialog.h"
+
 #include <QMouseEvent>
 
 class KeyLabel : public QLabel
@@ -21,6 +23,8 @@ private:
 	int m_width;
 	int m_xPos;
 	int m_yPos;
+
+	RemapDialog *remapDialog;
 
 public:
 	void setLocation(int x, int y, int width);

@@ -5,25 +5,27 @@
 // Crosslink between Qt class and win callback
 KeyProcess * kpReference;
 
+static DWORD m_vkcode;
+
 LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 {
+	LPKBDLLHOOKSTRUCT tmpData = (LPKBDLLHOOKSTRUCT)lParam;
 	if (nCode == HC_ACTION)
 	{
 		switch (wParam)
 		{
 			// Pass KeyDown/KeyUp messages for Qt class to logicize
 		case WM_KEYDOWN:
-			//qDebug() << "pressed";
+			m_vkcode = tmpData->vkCode;
 			break;
 		case WM_SYSKEYDOWN:
-			//qDebug() << "pressed";
+			m_vkcode = tmpData->vkCode;
 			break;
 		case WM_KEYUP:
 			//qDebug() << "released";
 			break;
 		}
 	}
-	LPKBDLLHOOKSTRUCT tmpData = (LPKBDLLHOOKSTRUCT)lParam;
 #if 0
 	if (tmpData->vkCode == eKey_A) {
 		((LPKBDLLHOOKSTRUCT)lParam)->vkCode = eKey_0;
@@ -38,7 +40,11 @@ LRESULT CALLBACK LowLevelKeyboardProc(int nCode, WPARAM wParam, LPARAM lParam)
 KeyProcess::KeyProcess()
 {
 	kpReference = this;
+}
 
+int lKeyPrecessGetVKCode()
+{
+	return m_vkcode;
 }
 
 KeyProcess::~KeyProcess()

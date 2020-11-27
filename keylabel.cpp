@@ -7,7 +7,9 @@ KeyLabel::KeyLabel(quint8 keyID, QWidget *parent) : QLabel(parent)
 {
 	m_keyID = keyID;
 	this->setText(KeyNameList.at(keyID));
-	this->setStyleSheet("border:1px solid black");
+	this->setStyleSheet("background-color:white");
+	this->setStyleSheet("border:2px solid black");
+	remapDialog = new RemapDialog;
 }
 
 void KeyLabel::setLocation(int x, int y, int width)
@@ -32,6 +34,6 @@ void KeyLabel::mouseDoubleClickEvent(QMouseEvent *event)
 		event->ignore();
 		return;
 	}
-	qDebug() << KeyNameList.at(m_keyID);
+	remapDialog->exec();
 	event->accept();
 }

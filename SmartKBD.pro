@@ -20,6 +20,7 @@ SOURCES += \
     keyname.cpp \
     keyprocess.cpp \
     main.cpp \
+    remapdialog.cpp \
     settingwindow.cpp \
     traymenu.cpp
 
@@ -27,11 +28,11 @@ HEADERS += \
     keylabel.h \
     keyname.h \
     keyprocess.h \
+    remapdialog.h \
     settingwindow.h \
     traymenu.h
 
-FORMS += \
-    settingwindow.ui
+FORMS +=
 
 
 win32: LIBS +=  -luser32

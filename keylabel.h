@@ -6,6 +6,11 @@
 #include <QLabel>
 #include <QHBoxLayout>
 
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QFile>
+
 #include "remapdialog.h"
 
 #include <QMouseEvent>
@@ -14,12 +19,12 @@ class KeyLabel : public QLabel
 {
 	Q_OBJECT
 public:
-	explicit KeyLabel(quint8 keyID, QWidget *parent = nullptr);
+	explicit KeyLabel(int keyID, QWidget *parent = nullptr);
 
 signals:
 
 private:
-	quint8 m_keyID;
+	int m_keyID;
 	int m_width;
 	int m_xPos;
 	int m_yPos;
@@ -32,6 +37,8 @@ public:
 private slots:
 	void mousePressEvent(QMouseEvent *event);
 	void mouseDoubleClickEvent(QMouseEvent *event);
+
+	void on_remapDialog_keymapChanged(int keyval);
 };
 
 #endif // KEYLABEL_H

@@ -2,8 +2,12 @@
 #define KEYPROCESS_H
 
 #include <qt_windows.h>
+#include <QJsonObject>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QFile>
 
-int lKeyPrecessGetVKCode();
+int lKeyProcessGetVKCode();
 
 class KeyProcess
 {
@@ -13,6 +17,7 @@ public:
 	~KeyProcess();
 private:
 	HHOOK hhkLowLevelKybd;
+	void refreshKeyMap();
 
 public:
 	void startProcess();
